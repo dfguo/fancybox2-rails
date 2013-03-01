@@ -1814,13 +1814,18 @@
 		},
 
 		beforeShow : function(opts, obj) {
-			if (obj.locked) {
-				this.el.addClass('fancybox-lock');
-
-				if (this.margin !== false) {
-					$('body').css('margin-right', getScalar( this.margin ) + obj.scrollbarWidth);
-				}
-			}
+		  // ===============================================================
+		  // = Removed becasused this casued the window to jump to the top =
+		  // = http://stackoverflow.com/questions/13547007/fancybox2-fancy-box-causes-page-to-to-jump-to-the-top
+		  // = Author: Dafeng
+		  // ===============================================================
+      // if (obj.locked) {
+      //  this.el.addClass('fancybox-lock');
+      // 
+      //  if (this.margin !== false) {
+      //    $('body').css('margin-right', getScalar( this.margin ) + obj.scrollbarWidth);
+      //  }
+      // }
 
 			this.open(opts);
 		},
